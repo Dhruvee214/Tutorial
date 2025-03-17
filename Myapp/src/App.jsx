@@ -1,18 +1,22 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom"
- import Table from "./Components/Table"
- import Form from "./Components/Form"
- 
- function App() {
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Table from './Components/Table'
+import Form from './Components/Form'
+import { ToastContainer } from 'react-toastify';
+
+function App() {
    return (
-     <div>
+      <div>
          <BrowserRouter>
             <Routes>
-               <Route path='/' element={<Table/>}/>
-               <Route path='/form' element={<Form/>}/>
+               <Route path='/' element={<Table />} />
+               <Route path='/form' element={<Form />} />
             </Routes>
+            <ToastContainer
+               position="top-center"
+            />
          </BrowserRouter>
-     </div>
+      </div>
    )
- }
+}
 
- export default App
+export default App
